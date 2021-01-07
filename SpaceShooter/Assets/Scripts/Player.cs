@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
         Debug.Log("Space is pressed");
         _canFire = Time.time + _fireRate;
         //create a clone on the player's position using the default rotation
-        Instantiate(_laser,transform.position + new Vector3(0,0.8f,0),Quaternion.identity);
+        Instantiate(_laser,transform.position + new Vector3(0,1f,0),Quaternion.identity);
     }
 
     public void Damage()
