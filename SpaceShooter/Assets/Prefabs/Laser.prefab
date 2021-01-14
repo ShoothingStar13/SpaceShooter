@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1148041020455608289}
   - component: {fileID: 2300444889141583751}
   m_Layer: 0
-  m_Name: laser
+  m_Name: Laser
   m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8210266325648340398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.537, y: 1.574, z: 0}
-  m_LocalScale: {x: 0.4657941, y: 0.39583874, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
