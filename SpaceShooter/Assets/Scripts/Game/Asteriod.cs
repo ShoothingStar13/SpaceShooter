@@ -19,7 +19,7 @@ public class Asteriod : MonoBehaviour
     void Update()
     {
         //Rotate the asteroid on the z axis by 3m/s
-        transform.Rotate(Vector3.forward *_speed * Time.deltaTime);
+        //transform.Rotate(Vector3.forward *_speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D other) 
