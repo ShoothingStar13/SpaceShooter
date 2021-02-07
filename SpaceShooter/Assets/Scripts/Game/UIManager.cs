@@ -12,15 +12,15 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Image _livesImg; 
     [SerializeField]
-    private GameObject _gameOverText; 
+    private GameObject _gameOverUI; 
     [SerializeField]
     private GameObject _restartText; 
     private GameManager _gameManager; 
     // Start is called before the first frame update
     void Start()
     {
-        _scoreText.text = "Score: 0"; 
-        _gameOverText.SetActive(false);
+        _scoreText.text = ": 0"; 
+        _gameOverUI.SetActive(false);
         _restartText.SetActive(false);
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         if(_gameManager == null)
@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateScore(int playerScore)
     {
-        _scoreText.text = "Score: " + playerScore.ToString();
+        _scoreText.text = ": " + playerScore.ToString();
     }
 
     public void UpdateLives(int currentLives)
@@ -51,20 +51,20 @@ public class UIManager : MonoBehaviour
 
     public void GameOverSequence()
     {
-        _gameOverText.SetActive(true);
+        _gameOverUI.SetActive(true);
         _restartText.SetActive(true);
-        StartCoroutine(GameOverFlickerRoutine());
+        //StartCoroutine(GameOverFlickerRoutine());
         _gameManager.GameOver(); 
     }
 
-    IEnumerator GameOverFlickerRoutine()
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(.5f);
-            _gameOverText.SetActive(false);
-            yield return new WaitForSeconds(.5f);
-            _gameOverText.SetActive(true); 
-        }
-    }
+    //IEnumerator GameOverFlickerRoutine()
+    //{
+    //    while(true)
+    //    {
+    //        yield return new WaitForSeconds(.5f);
+    //        _gameOverUI.SetActive(false);
+    //        yield return new WaitForSeconds(.5f);
+    //        _gameOverUI.SetActive(true); 
+    //    }
+    //}
 }

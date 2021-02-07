@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     private float _speed = 4f;
     private Player _player; 
 
-    Animator _enemyAnimator;
+    //Animator _enemyAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +18,11 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogError("Player script is null");
         }
-        _enemyAnimator = gameObject.GetComponent<Animator>();
-        if(_enemyAnimator == null)
-        {
-            Debug.LogError("Animator is null");
-        }
+        //_enemyAnimator = gameObject.GetComponent<Animator>();
+        //if(_enemyAnimator == null)
+        //{
+        //    Debug.LogError("Animator is null");
+        //}
     }
 
     // Update is called once per frame
@@ -52,11 +52,11 @@ public class Enemy : MonoBehaviour
             {
                 _player.AddScore(10);
             }
-            _enemyAnimator.SetTrigger("OnEnemyDeath");
+            //_enemyAnimator.SetTrigger("OnEnemyDeath");
             _speed = 0; 
             gameObject.GetComponent<Collider2D>().enabled = false; 
             //Destroy the enemy
-            Destroy(this.gameObject,2.633f);
+            Destroy(this.gameObject);//2.633f
         }
         if(other.tag == "Player")
         {
@@ -66,11 +66,11 @@ public class Enemy : MonoBehaviour
             {
                 player.Damage();
             }
-            _enemyAnimator.SetTrigger("OnEnemyDeath");
+            //_enemyAnimator.SetTrigger("OnEnemyDeath");
             _speed = 0; 
             gameObject.GetComponent<Collider2D>().enabled = false; 
             //Destroy the enemy 
-            Destroy(this.gameObject,2.633f);
+            Destroy(this.gameObject);//,2.633f
         }
     }
 }
