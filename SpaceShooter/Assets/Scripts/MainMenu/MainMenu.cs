@@ -7,6 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     public void LoadGame()
     {
-        SceneManager.LoadScene("Game"); 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Game"); 
+        }
+        
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -55,7 +56,19 @@ public class UIManager : MonoBehaviour
         _restartText.SetActive(true);
         //StartCoroutine(GameOverFlickerRoutine());
         _gameManager.GameOver(); 
-    }
+            // Restart the game
+
+    }        
+    
+    public void RestartGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+        // Go to title menu 
+    public void TitleMenu()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        }
 
     //IEnumerator GameOverFlickerRoutine()
     //{
