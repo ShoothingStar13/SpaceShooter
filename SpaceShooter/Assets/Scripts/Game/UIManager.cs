@@ -62,12 +62,12 @@ public class UIManager : MonoBehaviour
     
     public void RestartGame()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
         // Go to title menu 
     public void TitleMenu()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 
     //IEnumerator GameOverFlickerRoutine()
